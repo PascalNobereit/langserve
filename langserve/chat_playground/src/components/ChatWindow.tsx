@@ -8,13 +8,13 @@ import {
   type ChatMessageType,
   type ChatMessageBody,
 } from "./ChatMessage";
-import { ShareDialog } from "./ShareDialog";
+
 import { useStreamCallback } from "../useStreamCallback";
 
 import ArrowUp from "../assets/ArrowUp.svg?react";
 import CircleSpinIcon from "../assets/CircleSpinIcon.svg?react";
 import EmptyState from "../assets/EmptyState.svg?react";
-import LangServeLogo from "../assets/LangServeLogo.svg?react";
+
 import { useFeedback, usePublicTraceLink } from "../useSchemas";
 
 export type AIMessage = {
@@ -119,7 +119,7 @@ export function ChatWindow(props: {
 
   return (
     <div className="flex flex-col h-screen w-screen">
-      <nav className="flex items-center justify-between p-8">
+      {/* <nav className="flex items-center justify-between p-8">
         <div className="flex items-center">
           <LangServeLogo />
           <span className="ml-1">Playground</span>
@@ -134,7 +134,7 @@ export function ChatWindow(props: {
             </button>
           </ShareDialog>
         </div>
-      </nav>
+      </nav> */}
       <div className="flex-grow flex flex-col items-center justify-center mt-8">
         {messages.length > 0 ? (
           <div className="flex flex-col-reverse basis-0 overflow-auto flex-re grow max-w-[640px] w-[640px]">
@@ -177,7 +177,7 @@ export function ChatWindow(props: {
         ) : (
           <div className="flex flex-col items-center justify-center">
             <EmptyState />
-            <h1 className="text-lg">Start testing your application</h1>
+            <h1 className="text-lg">Liebe Zeitkapsel...</h1>
           </div>
         )}
       </div>
@@ -186,7 +186,7 @@ export function ChatWindow(props: {
           <AutosizeTextarea
             inputRef={messageInputRef}
             className="flex-grow mr-4 ml-8 border-none focus:ring-0 py-2 cursor-text"
-            placeholder="Send a message..."
+            placeholder="Nachricht eingeben..."
             value={currentInputValue}
             onChange={(newValue) => {
               setCurrentInputValue(newValue);

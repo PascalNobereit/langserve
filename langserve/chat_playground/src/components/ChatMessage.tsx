@@ -73,9 +73,10 @@ export function ChatMessage(props: {
           className="font-medium text-transform uppercase mb-2 appearance-none"
           defaultValue={type}
           onChange={(e) => props.onTypeChange?.(e.target.value)}
+          disabled
         >
-          <option value="human">HUMAN</option>
-          <option value="ai">AI</option>
+          <option value="human">Du</option>
+          <option value="ai">Zeitkapsel</option>
           <option value="system">SYSTEM</option>
         </select>
         <span className="flex">
@@ -88,7 +89,7 @@ export function ChatMessage(props: {
           ></TrashIcon>
         </span>
       </div>
-      <AutosizeTextarea value={content} fullHeight={true} onChange={props.onChange} onKeyDown={(e) => {
+      <AutosizeTextarea value={content} fullHeight={true} onChange={props.onChange} disabled onKeyDown={(e) => {
         if (
           e.key === 'Enter' &&
           !e.shiftKey &&
