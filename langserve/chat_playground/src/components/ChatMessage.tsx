@@ -1,7 +1,7 @@
 import { useState } from "react";
+import ReactMarkdown from "react-markdown";
 import { CorrectnessFeedback } from "./feedback/CorrectnessFeedback";
 import { resolveApiUrl } from "../utils/url";
-import { AutosizeTextarea } from "./AutosizeTextarea";
 import TrashIcon from "../assets/TrashIcon.svg?react";
 import RefreshCW from "../assets/RefreshCW.svg?react";
 
@@ -89,17 +89,9 @@ export function ChatMessage(props: {
           ></TrashIcon>
         </span>
       </div>
-      <AutosizeTextarea value={content} fullHeight={true} onChange={props.onChange} disabled onKeyDown={(e) => {
-        if (
-          e.key === 'Enter' &&
-          !e.shiftKey &&
-          props.isFinalMessage &&
-          type === "human"
-        ) {
-          e.preventDefault();
-          props.onRegenerate?.();
-        }
-      }}></AutosizeTextarea>
+      <div className="markdown-content">
+        <ReactMarkdown>{content}</ReactMarkdown>
+      </div>
       {type === "ai" && !isLoading && runId != null && (
         <div className="mt-2 flex items-center">
           {feedbackEnabled && <span className="mr-2"><CorrectnessFeedback runId={runId} onError={props.onError}></CorrectnessFeedback></span>}
