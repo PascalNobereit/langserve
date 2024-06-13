@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "langserve"
-version = "0.1.1"
-description = ""
+name = "langserve-neuraflow"
+version = "0.1.0"
+description = "Your description"
 readme = "README.md"
-authors = ["LangChain"]
-license = "LangServe"
-repository = "https://github.com/langchain-ai/langserve"
-exclude = ["langserve/playground,langserve/chat_playground"]
-include = ["langserve/playground/dist/**/*", "langserve/chat_playground/dist/**/*"]
+authors = ["Pascal Nobereit"]
+license = "MIT"
+repository = "https://github.com/pascalnobereit/langserve"
+exclude = ["your_module/playground", "your_module/chat_playground"]
+include = ["your_module/playground/dist/**/*", "your_module/chat_playground/dist/**/*"]
 
 [tool.poetry.dependencies]
 python = "^3.8.1"
