@@ -44,11 +44,11 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse, Response
 from typing_extensions import TypedDict
 
-from langserve.callbacks import AsyncEventAggregatorCallback, CallbackEventDict
-from langserve.lzstring import LZString
-from langserve.playground import serve_playground
-from langserve.pydantic_v1 import BaseModel, Field, ValidationError, create_model
-from langserve.schema import (
+from langserve_neuraflow.callbacks import AsyncEventAggregatorCallback, CallbackEventDict
+from langserve_neuraflow.lzstring import LZString
+from langserve_neuraflow.playground import serve_playground
+from langserve_neuraflow.pydantic_v1 import BaseModel, Field, ValidationError, create_model
+from langserve_neuraflow.schema import (
     BatchResponseMetadata,
     CustomUserType,
     Feedback,
@@ -59,8 +59,8 @@ from langserve.schema import (
     PublicTraceLink,
     PublicTraceLinkCreateRequest,
 )
-from langserve.serialization import WellKnownLCSerializer
-from langserve.validation import (
+from langserve_neuraflow.serialization import WellKnownLCSerializer
+from langserve_neuraflow.validation import (
     BatchBaseResponse,
     BatchRequestShallowValidator,
     InvokeBaseResponse,
@@ -75,7 +75,7 @@ from langserve.validation import (
     create_stream_log_request_model,
     create_stream_request_model,
 )
-from langserve.version import __version__
+from langserve_neuraflow.version import __version__
 
 try:
     from sse_starlette import EventSourceResponse

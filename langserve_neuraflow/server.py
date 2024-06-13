@@ -18,13 +18,13 @@ from typing import (
 from langchain_core.runnables import Runnable
 from typing_extensions import Annotated
 
-from langserve.api_handler import (
+from langserve_neuraflow.api_handler import (
     APIHandler,
     PerRequestConfigModifier,
     TokenFeedbackConfig,
     _is_hosted,
 )
-from langserve.pydantic_v1 import (
+from langserve_neuraflow.pydantic_v1 import (
     _PYDANTIC_MAJOR_VERSION,
     PYDANTIC_VERSION,
     BaseModel,

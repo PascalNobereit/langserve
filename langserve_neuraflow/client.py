@@ -39,13 +39,13 @@ from langchain_core.runnables.utils import AddableDict, Input, Output
 from langchain_core.tracers.log_stream import RunLogPatch
 from typing_extensions import Literal
 
-from langserve.callbacks import CallbackEventDict, ahandle_callbacks, handle_callbacks
-from langserve.serialization import (
+from langserve_neuraflow.callbacks import CallbackEventDict, ahandle_callbacks, handle_callbacks
+from langserve_neuraflow.serialization import (
     Serializer,
     WellKnownLCSerializer,
     load_events,
 )
-from langserve.server_sent_events import aconnect_sse, connect_sse
+from langserve_neuraflow.server_sent_events import aconnect_sse, connect_sse
 
 logger = logging.getLogger(__name__)
 

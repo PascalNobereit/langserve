@@ -4,8 +4,8 @@ from uuid import UUID
 
 from pydantic import BaseModel  # Floats between v1 and v2
 
-from langserve.pydantic_v1 import BaseModel as BaseModelV1
-from langserve.pydantic_v1 import Field
+from langserve_neuraflow.pydantic_v1 import BaseModel as BaseModelV1
+from langserve_neuraflow.pydantic_v1 import Field
 
 
 class CustomUserType(BaseModelV1):

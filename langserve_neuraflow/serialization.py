@@ -39,8 +39,8 @@ from langchain_core.outputs import (
 from langchain_core.prompt_values import ChatPromptValueConcrete
 from langchain_core.prompts.base import StringPromptValue
 
-from langserve.pydantic_v1 import BaseModel, ValidationError
-from langserve.validation import CallbackEvent
+from langserve_neuraflow.pydantic_v1 import BaseModel, ValidationError
+from langserve_neuraflow.validation import CallbackEvent
 
 logger = logging.getLogger(__name__)
 

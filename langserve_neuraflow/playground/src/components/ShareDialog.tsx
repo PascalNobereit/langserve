@@ -58,7 +58,7 @@ export function ShareDialog(props: { config: unknown; children: ReactNode }) {
   const invokeUrl = `${targetUrl}/invoke`;
 
   const pythonSnippet = `
-from langserve import RemoteRunnable
+from langserve_neuraflow import RemoteRunnable
 
 chain = RemoteRunnable("${targetUrl}")
 chain.invoke({ ... })

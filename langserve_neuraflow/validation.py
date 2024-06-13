@@ -24,7 +24,7 @@ from langchain_core.messages import BaseMessage
 from langchain_core.outputs import ChatGeneration, Generation, RunInfo
 from typing_extensions import Type
 
-from langserve.schema import BatchResponseMetadata, InvokeResponseMetadata
+from langserve_neuraflow.schema import BatchResponseMetadata, InvokeResponseMetadata
 
 try:
     from pydantic.v1 import BaseModel, Field, create_model
